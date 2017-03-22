@@ -16,40 +16,16 @@ module.exports = function (grunt) {
           "src": ["**/*.es6"],
           "dest": "dist/",
           "ext": ".js"
-        }, {
-          "expand": true,
-          "cwd": "test/lib/",
-          "src": ["**/*.spec.es6"],
-          "dest": "test/dist/",
-          "ext": ".spec.js"
-        }, {
-          "expand": true,
-          "cwd": "test/lib/",
-          "src": ["**/*.es6"],
-          "dest": "test/dist/",
-          "ext": ".js"
         }]
       }
     },
     "clean": [
-      "dist/",
-      "test/dist"
+      "dist/"
     ],
     "eslint": {
-      "target": ["lib/**/*.es6", "test/lib/**/*.es6", "Gruntfile.js"],
+      "target": ["lib/**/*.es6", "Gruntfile.js"],
       "options": {
         "configFile": ".eslintrc"
-      }
-    },
-    "mochaTest": {
-      "test": {
-        "options": {
-          "reporter": "spec",
-          "captureFile": "test_results.txt",
-          "quiet": false,
-          "timeout": 2000
-        },
-        "src": ["test/dist/**/*.spec.js"]
       }
     },
     "watch": {
@@ -89,10 +65,5 @@ module.exports = function (grunt) {
     "babel",
     "eslint",
     "jscs"
-  ]);
-
-  // Common test task
-  grunt.registerTask("testCommon", [
-    "mochaTest:test"
   ]);
 };

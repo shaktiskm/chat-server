@@ -7,15 +7,19 @@ var environmentVariables = require("./environmentVariables"),
     "http": {
       "protocol": "http",
       "domain": "127.0.0.1",
-      "port": 8020
+      "port": 3000
     },
-    "appName": "ch-focus-bridge",
+    "facebook": {
+      "clientID": environmentVariables.FACEBOOK_CLIENT_ID,
+      "clientSecret": environmentVariables.FACEBOOK_CLIENT_SECRETKEY,
+      "callbackURL": environmentVariables.FACEBOOK_CALLBACK_URL
+    },
     "mongoDb": {
-      "connectionString": environmentVariables.FOCUS_BRIDGE_MONGO_CONNECTION_STRING,
+      "connectionString": environmentVariables.MONGO_CONNECTION_STRING,
       "operationTimeout": 4000,
       "connectionOptions": {
         "server": {
-          "poolSize": 10,
+          "poolSize": 5,
           "socketOptions": {
             "autoReconnect": true,
             "keepAlive": 0
@@ -23,8 +27,7 @@ var environmentVariables = require("./environmentVariables"),
           "reconnectTries": 30,
           "reconnectInterval": 1000
         }
-      },
-      "promiseTimeout": 4500
+      }
     },
     "authorization": {
       "authorize": true

@@ -14,26 +14,28 @@
     "dist",
     "README.md"
   ],
-  "scripts": {
-    "test": "grunt testCommon"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:shaktiskm/chat-server.git"
   },
+  "license": "Shakti",
   "dependencies": {
     "babel-polyfill": "^6.7.4",
     "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
     "express": "^4.13.4",
-    "method-override": "^2.3.5",
-    "mongodb": "^2.1.7",
-    "node-uuid": "^1.4.7",
-    "q": "^1.4.1"
+    "express-session": "^1.15.1",
+    "mongodb": "2.2.22",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "q": "^1.4.1",
+    "socket.io": "^1.7.3"
   },
   "devDependencies": {
     "babel-eslint": "^5.0.0",
     "babel-preset-es2015": "^6.6.0",
-    "chai": "^2.3.0",
+    "grunt-cli": "^1.2.0",
     "grunt": "^0.4.5",
     "grunt-babel": "^6.0.0",
     "grunt-contrib-clean": "^0.6.0",
