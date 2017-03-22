@@ -1,4 +1,4 @@
-# ch-focus-bridge
+# Chat Server
 
 
 ## Setup
